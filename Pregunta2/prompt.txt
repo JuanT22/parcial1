@@ -1,0 +1,16 @@
+Necesito una solución en Scala para el siguiente problema:
+
+Quiero crear una función de orden superior llamada `transformarCalificaciones`. Esta función debe aceptar dos parámetros:
+1.  Una lista de calificaciones (que será una `List[Double]`).
+2.  Una "política" de transformación (que será una función de `Double => Double`).
+
+La función `transformarCalificaciones` debe devolver una nueva `List[Double]` resultado de aplicar la función de política a cada elemento de la lista original, usando el método `.map`.
+
+Además, por favor define tres funciones (políticas) de ejemplo:
+1.  `redondear`: Una función que tome un `Double` y lo redondee al entero más cercano (usando `math.round`), devolviendo un `Double`.
+2.  `bonificacion`: Una función que tome un `Double` y le sume `1.0`.
+3.  `reducirAltas`: Una función que verifique si la nota es mayor a 9. Si lo es, debe restarle `0.5`; de lo contrario, debe devolver la nota sin cambios.
+
+Finalmente, muestra un ejemplo de uso:
+1.  Crea una lista de ejemplo: `val notas = List(7.4, 8.9, 9.5, 6.2)`.
+2.  Llama a `transformarCalificaciones` usando la lista `notas` y cada una de las tres políticas (`redondear`, `bonificacion`, `reducirAltas`), guardando los resultados en tres nuevas variables.
