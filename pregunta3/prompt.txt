@@ -1,0 +1,10 @@
+Tengo el siguiente código en Scala que define una función de orden superior usando un `val`:
+
+val generadorSaludoAnonimo: String => (String => String) =
+  (fraseBase: String) =>
+    (nombre: String) =>
+      s"$fraseBase, $nombre!”
+
+Por favor, transforma este `val` en una función con nombre (usando `def`).
+
+La nueva función debe llamarse `generadorSaludo`. Debe tomar `fraseBase` como su único parámetro y devolver la función interna que toma `nombre`.
